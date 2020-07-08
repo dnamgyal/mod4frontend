@@ -9,7 +9,7 @@ state = {
 }
 
 
-//everytime you move an item (mosueup), remove item from clothing list, and then add to outfitlist
+//everytime you move an item (mouseup), remove item from clothing list, and then add to outfitlist
 
 handleClick = (e) => {
    return this.setState((prevState)=>{
@@ -18,12 +18,13 @@ handleClick = (e) => {
 }
 
 handleMouser = (e) => {
-    console.log(e.clientX, e.clientY)
+
 return this.setState({grid:[e.clientX, e.clientY]})
 
 }
 
-handleStop = (e) => {
+handleStop = () => {
+    
     this.props.addOutfits(this.props.id)
 }
 

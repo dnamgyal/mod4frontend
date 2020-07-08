@@ -11,7 +11,7 @@ class Main extends React.Component {
 state = { 
  clothingList: [],
  outfitList: [],
-myOutfits: []
+ myOutfits: [],
 }
 
 componentDidMount = () => {
@@ -33,6 +33,8 @@ addOutfits = (num) =>{
     this.setState((prevState) => {
      return {myOutfits: [...prevState.myOutfits, num]}
     })
+
+//POST to join table
 }
 
 
@@ -58,12 +60,14 @@ renderOutfits = ()  => {
         key = {outfit.id}
         name = {outfit.name}
         id = {outfit.id}
-  
+        outfitItems = {outfit.outfit_items}
+        addOutfits = {this.addOutfits} 
         />
     })
 }
  
     render() { 
+
         return (  
             <div className="main">
             <h1>LOOK/BOOK</h1>
