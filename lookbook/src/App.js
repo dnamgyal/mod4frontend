@@ -16,8 +16,10 @@ import {Switch, Route} from 'react-router-dom'
 //   }
 // }
 
-  render() { 
-    return ( 
+let App = () => {
+
+  let [data, setData] = useState({})
+
 
   useEffect(() => {
     fetch(`http://localhost:4000/users/1`).then(r => r.json()).then(data => setData(data))
