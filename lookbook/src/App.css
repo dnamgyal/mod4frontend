@@ -59,9 +59,22 @@ h1 {
 
 .flex-grid {
   display: flex;
+  flex-direction: row;
 }
 
-.col {
+.col, #middle{
+  flex: 1;
+  margin: 5px;
+  padding: 20px;
+  border: 5px solid #ff9479;
+  display: block;
+  height: auto;
+ margin-left: auto;
+  margin-right: auto; 
+  width: 5%;
+}
+
+.col,#clotheslist {
   flex: 1;
   margin: 5px;
   padding: 20px;
@@ -71,7 +84,20 @@ h1 {
   height: auto;
  margin-left: auto;
   margin-right: auto; 
-  /* width: 50%; */
+  width:90%;
+}
+
+.col,#closetlist {
+  flex: 1;
+  margin: 5px;
+  padding: 20px;
+  border: 5px solid #ff9479;
+  display: block;
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 5%;
 }
 
 ul.nav {
@@ -96,6 +122,11 @@ ul.nav li a {
   text-decoration: none;
 }
 
+.gridtest{
+display: grid;
+
+}
+
 /* ul.nav li a:hover {
   background-color: #111;
 } */
@@ -104,7 +135,7 @@ ul.nav li a {
   padding: 10px;
 }
 
- .tops{
+ /* .tops{
   display: block;
   width: 120px;
   height: 120px;
@@ -117,5 +148,5 @@ ul.nav li a {
   height: 300px;
   margin: 0 auto;
 } 
-
+ */
 

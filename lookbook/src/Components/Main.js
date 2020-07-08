@@ -1,5 +1,4 @@
 import React from 'react';
-import NavC from './NavC'
 import '../App.css';
 import  Clothing from './Clothing'
 import  Outfit from './Outfit'
@@ -12,9 +11,7 @@ class Main extends React.Component {
 state = { 
  clothingList: [],
  outfitList: [],
- headCoord:[{x:551, y:247}],
- topCoord: [{x:535, y:348}],
- bottomCoord: [{x:538, y:507}],
+myOutfits: []
 }
 
 componentDidMount = () => {
@@ -32,9 +29,15 @@ this.setState({outfitList: [obj]})
 )
 }
 
+addOutfits = (num) =>{
+    this.setState((prevState) => {
+     return {myOutfits: [...prevState.myOutfits, num]}
+    })
+}
+
+
   
 renderClothing = () => {
-  
 return this.state.clothingList.map((clothing)=>{
         return <Clothing
         key = {clothing.id}
@@ -42,19 +45,19 @@ return this.state.clothingList.map((clothing)=>{
         brand = {clothing.brand}
         image = {clothing.image}
         category = {clothing.category}
+        id ={clothing.id}
+        addOutfits = {this.addOutfits}
         />
     })
 }
 
 renderOutfits = ()  => {
-    console.log(this.state.outfitList)
+
     return this.state.outfitList.map((outfit)=>{
         return <Outfit
         key = {outfit.id}
         name = {outfit.name}
-        head= {this.state.headCoord}
-        top={this.state.topCoord}
-        bottom={this.state.bottomCoord}
+        id = {outfit.id}
   
         />
     })
@@ -64,11 +67,10 @@ renderOutfits = ()  => {
         return (  
             <div className="main">
             <h1>LOOK/BOOK</h1>
-            <NavC/>
             <div className="flex-grid">
 
                 {/* ----- FIRST COLUMN BELOW ------*/}
-                <div className="col">
+                <div className="col" id="clotheslist"> 
                     <h2>YOUR CLOTHES</h2>
                     {this.renderClothing()}
         
@@ -76,13 +78,13 @@ renderOutfits = ()  => {
                 </div>
 
                 {/* ----- SECOND COLUMN BELOW ------*/}
-        <div className="col">
+        <div className="col" id="middle">
             <Mannequin
             />
         </div>
         
             {/* ----- THIRD COLUMN BELOW ------*/}
-        <div className="col">
+        <div className="col" id="closetlist">
             <h2>Your Outfits</h2>
             {this.renderOutfits()}
         </div>

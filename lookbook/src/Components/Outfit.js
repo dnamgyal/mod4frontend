@@ -1,31 +1,25 @@
 import React from 'react'
 import '../App.css';
 
-// class Outfit extends React.Component {
+class Outfit extends React.Component {
 
-// handleClick = (e) => {
+handleClick = (e) => {
+console.log(e.target)
 
-
-// }
-
-
-//     render() { 
-//         return ( 
-//             <div onClick = {this.handleClick}>
-//             <p>{this.props.name}</p>
-//             </div>
-//          );
-//     }
-// }
- 
-// export default Outfit ;
-
-
-let Outfit = (props) => {
-    return (
-        <p>{props.name}</p>
-    )
 }
 
+    render() { 
+   
+        return ( 
+            <div onClick = {this.handleClick}>
+            <p>{this.props.name}</p>
+            </div>
+         );
+    }
+}
+ 
+export default Outfit ;
 
-export default Outfit
+
+
+

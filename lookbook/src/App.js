@@ -34,11 +34,11 @@ let App = () => {
       <Route path="/profile">
         <Profile data={data}/>
       </Route>
-      {/* <Route path="/closet" component={Closet} /> */}
-      <Route path="/closet" component={Main} />
-
+      <Route path="/closet">
+        <Main data={data} />
+        </Route>
     </Switch>
-    </div>
+        </div>
 
    );
 
