@@ -6,8 +6,7 @@ import  Outfit from './Outfit'
 import  Mannequin from './Mannequin'
 
 
-class Main extends React.Component {
-//could change to functional component here. 
+class Main extends React.Component { 
 
 
 state = { 
@@ -19,13 +18,13 @@ state = {
 }
 
 componentDidMount = () => {
-fetch("http://localhost:3000/users/1")
+fetch("http://localhost:4000/users/1")
 .then(resp => resp.json())
 .then((obj) => {
 this.setState({clothingList: obj.items})
 })
 
-fetch("http://localhost:3000/outfits/1")
+fetch("http://localhost:4000/outfits/1")
 .then(resp => resp.json())
 .then((obj) => {
 this.setState({outfitList: [obj]})

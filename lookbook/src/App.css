@@ -51,11 +51,10 @@ h1 {
   /* border: 1px solid black; */
 }
 
-img{
-  height: 70%;
-
-  /* border: 1px solid black; */
-  
+#male-model{
+  display: block;
+  height: 700px;
+  margin: 0 auto;
 }
 
 .flex-grid {
@@ -68,9 +67,11 @@ img{
   padding: 20px;
   border: 5px solid #ff9479;
   display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  width: 50%;
+  width: 400px;
+  height: auto;
+ margin-left: auto;
+  margin-right: auto; 
+  /* width: 50%; */
 }
 
 ul.nav {
@@ -103,12 +104,18 @@ ul.nav li a {
   padding: 10px;
 }
 
-.tops{
-  max-height: 250px;
+ .tops{
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
 }
 
 .bottom{
-  max-height: 475px;
-}
+  display: block;
+  width: 250px;
+  height: 300px;
+  margin: 0 auto;
+} 
 
 

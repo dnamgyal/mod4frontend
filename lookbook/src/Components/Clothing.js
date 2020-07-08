@@ -19,7 +19,7 @@ handleClick = (e) => {
     let img = <img onDoubleClick={this.handleClick} className="firstimg" src={this.props.image}/>
  
     if (this.props.category === "top"){
-        img = <img onDoubleClick={this.handleClick} className="tops" height="300" src={this.props.image}/>
+        img = <img onDoubleClick={this.handleClick} className="tops" height="200" src={this.props.image}/>
     }
     if (this.props.category === "bottom"){
         img = <img onDoubleClick={this.handleClick} className="bottom" height="450" src={this.props.image}/>

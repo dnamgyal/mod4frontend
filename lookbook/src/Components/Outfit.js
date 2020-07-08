@@ -23,7 +23,7 @@ import '../App.css';
 
 let Outfit = (props) => {
     return (
-        <p>{props.outfit.name}</p>
+        <p>{props.name}</p>
     )
 }
 
