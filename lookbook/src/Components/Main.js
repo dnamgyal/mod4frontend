@@ -2,26 +2,35 @@ import React from 'react';
 import NavC from './NavC'
 import '../App.css';
 import  Clothing from './Clothing'
-import man from './man1.png'
-import Draggable, {DraggableCore} from 'react-draggable';
+import  Outfit from './Outfit'
+import  Mannequin from './Mannequin'
+
 
 class Main extends React.Component {
 //could change to functional component here. 
 
 
 state = { 
- clothingList: []
+ clothingList: [],
+ outfitList: [],
+ headCoord:[{x:551, y:247}],
+ topCoord: [{x:535, y:348}],
+ bottomCoord: [{x:538, y:507}],
 }
 
 componentDidMount = () => {
 fetch("http://localhost:3000/users/1")
 .then(resp => resp.json())
-.then((obj) => 
+.then((obj) => {
 this.setState({clothingList: obj.items})
+})
 
+fetch("http://localhost:3000/outfits/1")
+.then(resp => resp.json())
+.then((obj) => {
+this.setState({outfitList: [obj]})
+}
 )
-
-
 }
 
   
@@ -34,6 +43,20 @@ return this.state.clothingList.map((clothing)=>{
         brand = {clothing.brand}
         image = {clothing.image}
         category = {clothing.category}
+        />
+    })
+}
+
+renderOutfits = ()  => {
+    console.log(this.state.outfitList)
+    return this.state.outfitList.map((outfit)=>{
+        return <Outfit
+        key = {outfit.id}
+        name = {outfit.name}
+        head= {this.state.headCoord}
+        top={this.state.topCoord}
+        bottom={this.state.bottomCoord}
+  
         />
     })
 }
@@ -55,12 +78,14 @@ return this.state.clothingList.map((clothing)=>{
 
                 {/* ----- SECOND COLUMN BELOW ------*/}
         <div className="col">
-            <img src={man} id="male-model" alt="man in underwear"/>
+            <Mannequin
+            />
         </div>
         
             {/* ----- THIRD COLUMN BELOW ------*/}
         <div className="col">
-            <h2>YOUR OUTFITS</h2>
+            <h2>Your Outfits</h2>
+            {this.renderOutfits()}
         </div>
     </div>
 </div>
