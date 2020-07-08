@@ -1,22 +1,46 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Main from './Components/Main'
+import NavBar from './Components/NavBar'
 
-class App extends React.Component {
+import Profile from './Containers/Profile'
+import Closet from './Containers/Closet'
+
+import {Switch, Route} from 'react-router-dom'
 
 
-
-
-
-
-  render() { 
-    return ( 
-
-     <Main />
+// class App extends React.Component {
+//   render() { 
   
-     );
-  }
+//     <Main />
+//   }
+// }
 
+let App = () => {
+
+  let [data, setData] = useState({})
+
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/users/1`).then(r => r.json()).then(data => setData(data))
+  }, [])
+
+
+  return ( 
+
+    <div className="App">
+    <NavBar userName={data.username}/>
+    <Switch>
+      <Route path="/profile">
+        <Profile data={data}/>
+      </Route>
+      {/* <Route path="/closet" component={Closet} /> */}
+      <Route path="/closet" component={Main} />
+
+    </Switch>
+    </div>
+
+   );
 
 }
 
