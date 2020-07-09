@@ -78,7 +78,7 @@ renderOutfits = ()  => {
                     <h2>YOUR CLOTHES</h2>
                     {this.renderClothing()}
         
-
+          
                 </div>
 
                 {/* ----- SECOND COLUMN BELOW ------*/}

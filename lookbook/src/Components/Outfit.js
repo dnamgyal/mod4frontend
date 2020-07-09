@@ -5,14 +5,25 @@ import Clothing from './Clothing'
 class Outfit extends React.Component {
 
     state = {
-        clicked: false
+        clicked: false,
+        show: false
     }
 
 handleClick = (e) => {
+    e.preventDefault()
     return this.setState((prevState)=>{
         return {clicked: !prevState.clicked}
-     })
+     })   
 }
+
+handleShow = (e) => {
+    e.preventDefault()
+    return this.setState((prevState)=>{
+        return {show: !prevState.clicked}
+     })   
+
+}
+
 
 showOutfit = () => {
    return  this.props.outfitItems.map((item)=>{
@@ -30,13 +41,12 @@ showOutfit = () => {
 }
 
     render() { 
-   
         return ( 
-            <div onDoubleClick = {this.handleClick}>
-            <p>{this.props.name}</p>
-            {this.state.clicked ? 
-            this.showOutfit()
-            : null }
+            <div onDoubleClick= {this.handleClick}>
+            <p onClick={this.handleShow}>{this.props.name}</p>
+    
+                {this.state.show ? this.showOutfit() : null}
+    
             </div>
          );
     }

@@ -4,7 +4,7 @@ import Main from './Components/Main'
 import NavBar from './Components/NavBar'
 
 import Profile from './Containers/Profile'
-import Closet from './Containers/Closet'
+// import Closet from './Containers/Closet'
 
 import {Switch, Route} from 'react-router-dom'
 
