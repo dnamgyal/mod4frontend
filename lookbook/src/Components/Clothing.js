@@ -25,7 +25,7 @@ return this.setState({grid:[e.clientX, e.clientY]})
 }
 
 handleStop = (e) => {
-    e.preventDefault()
+ 
     this.props.addOutfits(this.props.id)
 }
 
@@ -56,7 +56,7 @@ handleStop = (e) => {
    
 
         return ( 
- 
+        
         <div className="clothing-items">
             
         <Draggable

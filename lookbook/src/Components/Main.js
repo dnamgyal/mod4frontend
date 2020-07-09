@@ -33,11 +33,12 @@ addOutfits = (num) =>{
     this.setState((prevState) => {
      return {myOutfits: [...prevState.myOutfits, num]}
     })
-
-//POST to join table
+    console.log("this is the myOutfit state", this.state.myOutfits)
 }
 
-
+clearMyOutfits = () => {
+    this.setState({myOutfits: []})
+}
   
 renderClothing = () => {
 return this.state.clothingList.map((clothing)=>{
@@ -84,6 +85,8 @@ renderOutfits = ()  => {
                 {/* ----- SECOND COLUMN BELOW ------*/}
         <div className="col" id="middle">
             <Mannequin
+            myOutfits={this.state.myOutfits}
+            clearMyOutfits={this.clearMyOutfits}
             />
         </div>
         
