@@ -1,5 +1,4 @@
 import React from 'react';
-import NavC from './NavC'
 import '../App.css';
 import  Clothing from './Clothing'
 import  Outfit from './Outfit'
@@ -47,14 +46,11 @@ return this.state.clothingList.map((clothing)=>{
 }
 
 renderOutfits = ()  => {
-    console.log(this.state.outfitList)
+    // console.log(this.state.outfitList)
     return this.state.outfitList.map((outfit)=>{
         return <Outfit
         key = {outfit.id}
-        name = {outfit.name}
-        head= {this.state.headCoord}
-        top={this.state.topCoord}
-        bottom={this.state.bottomCoord}
+        outfit={outfit}
   
         />
     })
@@ -63,8 +59,6 @@ renderOutfits = ()  => {
     render() { 
         return (  
             <div className="main">
-            <h1>LOOK/BOOK</h1>
-            <NavC/>
             <div className="flex-grid">
 
                 {/* ----- FIRST COLUMN BELOW ------*/}

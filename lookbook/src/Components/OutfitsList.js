@@ -10,11 +10,8 @@ let OutfitsList = (props) => {
     return (
         <div>
      { props.outfits ? props.outfits.map((outfit) => {
-       return (<Outfit outfit={outfit} key={outfit.id} />)
+       return (<Outfit outfit={outfit} key={outfit.id} deleteOutfit={props.deleteOutfit}/>)
     }) : null}
-     
-     
-     
      </div>
     )
 }
