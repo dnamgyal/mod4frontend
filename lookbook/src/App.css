@@ -55,6 +55,7 @@ h1 {
   display: block;
   height: 700px;
   margin: 0 auto;
+  z-index: -1000;
 }
 
 .flex-grid {
