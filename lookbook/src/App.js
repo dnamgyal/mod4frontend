@@ -3,6 +3,7 @@ import './App.css';
 import Main from './Components/Main'
 import NavBar from './Components/NavBar'
 import Profile from './Containers/Profile'
+
 import {Switch, Route} from 'react-router-dom'
 
 
@@ -60,7 +61,7 @@ let App = () => {
         <Main data={data} />
         </Route>
     </Switch>
-    </div>
+        </div>
 
    );
 

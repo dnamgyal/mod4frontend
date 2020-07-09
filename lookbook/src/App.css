@@ -39,7 +39,7 @@ h1 {
 
 .main{
   display: flex;
-  width: auto;
+  width: 40%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -59,19 +59,59 @@ h1 {
 
 .flex-grid {
   display: flex;
+  flex-direction: row;
 }
 
-.col {
-  flex: 1;
+.col, #middle{
+  /* flex: 1; */
   margin: 5px;
   padding: 20px;
-  border: 5px solid #ff9479;
+  border: 1px solid #ff9479;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+}
+
+.col,#clotheslist {
+  /* flex: 1; */
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid #ff9479;
   display: block;
   width: 400px;
-  height: auto;
- margin-left: auto;
+
+  margin-left: auto;
   margin-right: auto; 
-  /* width: 50%; */
+ 
+}
+
+.button{
+  text-align: center;
+  background-color: wheat;
+  border-radius: 25px;
+  border: 1px solid sandybrown;
+}
+
+.col,#closetlist {
+  /* flex: 1; */
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid #ff9479;
+  display: block;
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+input {
+  margin: 10px;
 }
 
 ul.nav {
@@ -96,6 +136,11 @@ ul.nav li a {
   text-decoration: none;
 }
 
+.gridtest{
+display: grid;
+
+}
+
 /* ul.nav li a:hover {
   background-color: #111;
 } */
@@ -104,7 +149,7 @@ ul.nav li a {
   padding: 10px;
 }
 
- .tops{
+ /* .tops{
   display: block;
   width: 120px;
   height: 120px;
@@ -117,5 +162,10 @@ ul.nav li a {
   height: 300px;
   margin: 0 auto;
 } 
+ */
 
 
+/* #clotheslist {
+  display: grid;
+  
+} */
