@@ -12,7 +12,7 @@ name: ""
 
 handleClick = (e) => {
   this.setState({    
-    [evt.target.name] : evt.target.value
+    [e.target.name] : e.target.value
   }) 
 }
 
