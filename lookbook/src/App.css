@@ -39,7 +39,7 @@ h1 {
 
 .main{
   display: flex;
-  width: auto;
+  width: 40%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -51,40 +51,121 @@ h1 {
   /* border: 1px solid black; */
 }
 
-img{
-  height: 70%;
-
-  /* border: 1px solid black; */
-  
+#male-model{
+  display: block;
+  height: 700px;
+  margin: 0 auto;
 }
 
 .flex-grid {
   display: flex;
+  flex-direction: row;
 }
 
-.col {
-  flex: 1;
+.col, #middle{
+  /* flex: 1; */
   margin: 5px;
   padding: 20px;
-  border: 5px solid #ff9479;
+  border: 1px solid #ff9479;
   display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
 }
 
+.col,#clotheslist {
+  /* flex: 1; */
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid #ff9479;
+  display: block;
+  width: 400px;
 
+  margin-left: auto;
+  margin-right: auto; 
+ 
+}
+
+.button{
+  text-align: center;
+  background-color: wheat;
+  border-radius: 25px;
+  border: 1px solid sandybrown;
+}
+
+.col,#closetlist {
+  /* flex: 1; */
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid #ff9479;
+  display: block;
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+  
+}
+
+input {
+  margin: 10px;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(88, 86, 86);
+}
+
+ul.nav li {
+  float: left;
+}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.gridtest{
+display: grid;
+
+}
+
+/* ul.nav li a:hover {
+  background-color: #111;
+} */
 .nav-bar{
   /* border: 1px solid black; */
   padding: 10px;
 }
 
-.tops{
-  max-height: 250px;
+ /* .tops{
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
 }
 
 .bottom{
-  max-height: 475px;
-}
+  display: block;
+  width: 250px;
+  height: 300px;
+  margin: 0 auto;
+} 
+ */
 
 
+/* #clotheslist {
+  display: grid;
+  
+} */

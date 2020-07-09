@@ -6,17 +6,18 @@ import Form from './Form'
 class Mannequin extends React.Component {
 
 
-
-
-
-
  render () {
 
       return (
         <React.Fragment>
         <img src={man} onClick = {this.handleClick} id="male-model" alt="man in underwear"/>
-     
-       <Form/>
+        <br></br>
+        <br></br>
+       <Form
+       myOutfits={this.props.myOutfits}
+       clearMyOutfits={this.props.clearMyOutfits}
+       />
+      
         </React.Fragment>
       )
     

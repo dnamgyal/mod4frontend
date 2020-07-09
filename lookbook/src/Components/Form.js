@@ -3,29 +3,63 @@ import Mannequin from './Mannequin'
 import '../App.css';
 
 
-class Form extends Component {
+class Form extends React.Component {
 
     state = {
-        name: ""
-        
+        name: "",
+        newOutfitID: 0
         }
 
-        handleClick = (e) => {
+        handleInput = (e) => {
             this.setState({    
-              [evt.target.name] : evt.target.value
+              [e.target.name] : e.target.value
             }) 
           }
           
-          handleButton = (e) => {
-          e.preventDefault()
-          console.log(e.target)
-          
+          handleSubmit = (e) => {
+            e.preventDefault()
+            this.fetchOutfits()
+            // this.fetchOutfitItems()
+            // setTimeout(this.handleClear(), 5000)
           }
+
+        fetchOutfits = () => {
+            let uniqArr = new Set (this.props.myOutfits)
+            const backToArr = [...uniqArr]
+            fetch("http://localhost:4000/outfits/", {method: "POST",
+            headers: {"content-type": "application/json"},
+            body: JSON.stringify({
+              name: this.state.name, user_id: 1
+            })
+          })
+          .then(resp => resp.json())
+          .then((newOutfit)=> {
+        
+            backToArr.forEach((outfit)=>{
+                fetch("http://localhost:4000/outfit_items", {method: "POST",
+                headers: {"content-type" : "application/json"},
+                body: JSON.stringify({
+                    outfit_id: newOutfit.id, item_id: outfit
+                })
+            })
+          })
+      
+          })
+
+        }
+          
+    
+        
+        handleClear = () =>{
+          return  this.props.clearMyOutfits
+        }
+
+
 
     render() { 
         return (  
             <div>
-            <form onSubmit={this.handleButton}> 
+            <form onSubmit={this.handleSubmit}> 
             <input input-type="text" name="name" placeholder="Name this look" onChange={this.handleInput} value={this.state.name}></input><br></br>
             <input type="submit" name="submit" value="save this look!"></input>
             </form>
