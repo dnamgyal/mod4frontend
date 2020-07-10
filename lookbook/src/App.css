@@ -37,9 +37,15 @@ h1 {
 
 }
 
+
+.profile {
+  display: flex;
+  width: 80%
+}
+
 .main{
   display: flex;
-  width: 40%;
+  width: 50%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -50,6 +56,8 @@ h1 {
   flex-direction: column;
   /* border: 1px solid black; */
 }
+
+
 
 #male-model{
   display: block;
@@ -89,6 +97,11 @@ h1 {
   margin-left: auto;
   margin-right: auto; 
  
+}
+.center {
+  margin: auto;
+  width: 45%;
+  padding: 10px;
 }
 
 .button{
@@ -170,3 +183,8 @@ display: grid;
   display: grid;
   
 } */
+
+
+.box {
+  display: flex;
+}
