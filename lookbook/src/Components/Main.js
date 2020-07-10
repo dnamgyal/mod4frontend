@@ -50,7 +50,7 @@ renderOutfits = ()  => {
         name = {outfit.name}
         id = {outfit.id}
         outfitItems = {outfit.outfit_items}
-        addOutfits = {this.props.addOutfits} 
+        addOutfits = {this.addOutfits} 
         />
     })
 }

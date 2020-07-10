@@ -55,8 +55,20 @@ let App = () => {
   return ( 
 
     <div>
-      <h1 className="center">LOOK/BOOK</h1>
+<h1 className="center">
+  <span>L</span>
+  <span>O</span>
+  <span>O</span>
+  <span>K</span>
+  <span>/</span>
+  <span>B</span>
+  <span>O</span>
+  <span>O</span>
+  <span>K</span>
 
+</h1>
+<br></br>
+<br></br>
     <NavBar userName={data.username}/>
     <Switch>
       <Route path="/profile">
