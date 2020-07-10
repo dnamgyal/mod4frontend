@@ -58,7 +58,7 @@ let App = () => {
   return ( 
 
     <div>
-      <h1 class="center">LOOK/BOOK</h1>
+      <h1 className="center">LOOK/BOOK</h1>
 
     <NavBar userName={data.username}/>
     <Switch>
