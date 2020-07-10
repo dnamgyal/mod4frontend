@@ -3,7 +3,6 @@ import ProfileOutfit from './ProfileOutfit'
 
 
 let OutfitsList = (props) => {
-    console.log(props.outfits)
     return (
         <div>
      { props.outfits ? props.outfits.map((outfit) => {

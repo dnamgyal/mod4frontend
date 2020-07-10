@@ -1,7 +1,5 @@
 import React from 'react'
 import '../App.css';
-
-
 import Clothing from './Clothing'
 
 class Outfit extends React.Component {

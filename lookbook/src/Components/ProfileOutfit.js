@@ -5,7 +5,6 @@ import {Button} from 'react-bootstrap'
 
 
 let ProfileOutfit = (props) => {
-    console.log(props.outfit)
 
     let outfit = props.outfit["outfit_items"]
 
@@ -16,7 +15,6 @@ let ProfileOutfit = (props) => {
         return !duplicate;
       });
 
-    console.log(filteredArr, "array ")
 
 
 
@@ -24,7 +22,6 @@ let ProfileOutfit = (props) => {
             return <OutfitItem item={outfitItem.item} key={outfitItem.id}/>
         })
     let handleDelete = (evt) => {
-        console.log(props.outfit.id)
         fetch(`http://localhost:4000/outfits/${props.outfit.id}`, {
             method: "DELETE"
         }).then(r => r.json()).then(props.deleteOutfit(props.outfit.id))
