@@ -195,7 +195,7 @@ h1 span:nth-child(14) { -webkit-animation-delay: 1.3s; animation-delay: 1.3s; } 
   flex-direction: row;
 }
 
-.col, #middle{
+.col#middle{
   /* flex: 1; */
   margin: 5px;
   padding: 20px;
@@ -208,6 +208,13 @@ h1 span:nth-child(14) { -webkit-animation-delay: 1.3s; animation-delay: 1.3s; } 
   justify-content: center;
   text-align: center;
   width: 300px;
+  background-color: white;
+}
+
+.clothing-items{
+  width:90x; 
+  height:90px; 
+  overflow: visible;
 }
 
 .col,#clotheslist {

@@ -54,6 +54,10 @@ renderOutfits = ()  => {
         />
     })
 }
+
+addOutfitToArr = (newOutfit) => {
+    this.setState({outfitList: [...this.state.outfitList, newOutfit] })
+} 
  
     render() { 
 
@@ -64,6 +68,7 @@ renderOutfits = ()  => {
                 {/* ----- FIRST COLUMN BELOW ------*/}
                 <div className="col" id="clotheslist"> 
                     <h2>YOUR CLOTHES</h2>
+
                     {this.renderClothing()}
         
           
@@ -75,6 +80,7 @@ renderOutfits = ()  => {
             myOutfits={this.state.myOutfits}
             clearMyOutfits={this.clearMyOutfits}
             addOutfit={this.props.addOutfit}
+            addOutfitToArr={this.addOutfitToArr}
             />
         </div>
         

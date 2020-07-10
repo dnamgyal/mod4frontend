@@ -32,6 +32,7 @@ class Mannequin extends React.Component {
        myOutfits={this.props.myOutfits}
        clearMyOutfits={this.props.clearMyOutfits}
        addOutfit={this.props.addOutfit}
+       addOutfitToArr={this.props.addOutfitToArr}
        />
       
         </React.Fragment>

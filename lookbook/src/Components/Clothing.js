@@ -34,18 +34,35 @@ handleStop = (e) => {
     
     let img = <img onDoubleClick={this.handleClick} className="firstimg" src={this.props.image}/>
     if (this.state.clicked) {
-    if (this.props.category === "top"){
+  
+    if (this.props.brand === "Supreme" && this.props.category==="top"){
+            img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="tops" height="400" src={this.props.image}/>
+        }
+
+    else if (this.props.category === "top"){
         img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="tops" height="230" src={this.props.image}/>
     }
-    if (this.props.category === "bottom"){
-        img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="500" src={this.props.image}/>
+//    if (this.props.brand === "Zara" &&  this.props.category === "Bottom" ){
+//         img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="100" src={this.props.image}/>
+
+//     }
+    if (this.props.name === "Denim Shorts"){
+        img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="190" src={this.props.image}/>
 
     }
-    if (this.props.category === "footwear"){
+    if (this.props.name === "Cute Top"){
+        img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="190" src={this.props.image}/>
+
+    }
+    if (this.props.name === "dress pants"){
+        img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="490" src={this.props.image}/>
+
+    }
+    else if (this.props.category === "footwear"){
         img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="450" src={this.props.image}/>
 
     }
-    if (this.props.category === "headwear"){
+    else if (this.props.category === "headwear"){
         img = <img onDoubleClick={this.handleClick} onMouseUp={this.handleMU} className="bottom" height="200" src={this.props.image}/>
 
     }
