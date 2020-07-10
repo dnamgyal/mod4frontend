@@ -48,8 +48,8 @@ let AddItem = (props) => {
             <input type="text" name="name" value={itemObj.name} autoComplete="off" onChange={handleInputs} required/><br />
             <label htmlFor="f_brand">Brand</label>
             <input type="text" name="brand" value={itemObj.brand} autoComplete="off" onChange={handleInputs} required/><br />
-            <label htmlFor="f_category">Category</label>
-            <select value={itemObj.category} name="category" onChange={handleInputs}><br />
+            <label htmlFor="f_category">Category </label>
+            <select value={itemObj.category} name="category" onChange={handleInputs}>
                 <option value="headwear">Headwear</option>
                 <option value="top">Top</option>
                 <option value="bottom">Bottom</option>

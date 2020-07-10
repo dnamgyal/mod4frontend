@@ -14,7 +14,7 @@ state = {
  myOutfits: [],
 }
 
-commponentDidUpdate(prevProps) {
+commponentDidUpdate() {
     this.setState({outfitList: this.props.data.outfits})
 }
 
@@ -22,7 +22,6 @@ addOutfits = (num) =>{
     this.setState((prevState) => {
      return {myOutfits: [...prevState.myOutfits, num]}
     })
-    console.log("this is the myOutfit state", this.state.myOutfits)
 }
 
 clearMyOutfits = () => {

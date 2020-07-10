@@ -6,7 +6,8 @@ import '../App.css';
 class Form extends React.Component {
     state = {
         name: "",
-        newOutfitID: 0
+        newOutfitID: 0,
+        outfitId: 0
         }
         handleInput = (e) => {
             this.setState({
@@ -15,6 +16,7 @@ class Form extends React.Component {
           }
           handleSubmit = (e) => {
             e.preventDefault()
+            console.log("submitted")
             this.fetchOutfits()
           }
 
@@ -26,6 +28,7 @@ class Form extends React.Component {
             })
           })
           .then(resp => resp.json())
+          
           .then((newOutfit)=> {
             this.props.addOutfit(newOutfit)
 
@@ -40,11 +43,9 @@ class Form extends React.Component {
 
           })
         }
-        handleClear = () =>{
-          return  this.props.clearMyOutfits
-        }
+
     render() {
-      console.log(this.props, "in form")
+      console.log(this.state.outfitId)
         return (
             <div>
             <form onSubmit={this.handleSubmit}>

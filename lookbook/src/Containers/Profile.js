@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import OutfitsList from '../Components/OutfitsList'
 import ItemsList from '../Components/ItemsList'
 import AddItem from '../Components/AddItem'
-import {DropdownButton, Dropdown, Container} from 'react-bootstrap'
 import '../App.css';
 
 
@@ -30,13 +29,13 @@ let Profile = (props) => {
 
     return (
 
-        <div class="box">
-        <div class="col" id="addForm">
+        <div className="box">
+        <div className="col" id="addForm">
         <h2>ADD NEW CLOTHING ITEM</h2>
 
             <AddItem id={props.data.id} addItem={props.addItem}/>
         </div>
-        <div class="col" id="itemList" >
+        <div className="col" id="itemList" >
         <h2>MY CLOTHES</h2>
 
         
@@ -51,7 +50,7 @@ let Profile = (props) => {
 
         <ItemsList items={returnArray()} deleteItem={props.deleteItem} updateItem={props.updateItem}/>
         </div>
-        <div class="col" id="itemList">
+        <div className="col" id="itemList">
         <h2>MY OUTFITS</h2>
         <OutfitsList outfits={props.data.outfits} deleteOutfit={props.deleteOutfit}/>
         </div>
