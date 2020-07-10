@@ -1,6 +1,6 @@
-import React from 'react';
-import Mannequin from './Mannequin'
-import '../App.css';
+  import React from 'react';
+  import Mannequin from './Mannequin'
+  import '../App.css';
 
 
 class Form extends React.Component {
