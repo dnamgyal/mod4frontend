@@ -3,7 +3,6 @@ import './App.css';
 import Main from './Components/Main'
 import NavBar from './Components/NavBar'
 import Profile from './Containers/Profile'
-
 import {Switch, Route} from 'react-router-dom'
 
 
@@ -46,11 +45,20 @@ let App = () => {
     setData({...data, items: updatedItemsList})
   }
 
+  let addOutfit = (newOutfit) => {
+    debugger
+    let newList = [...data.outfits, newOutfit]
+    setData({...data, outfits: newList})
+    debugger
+
+    console.log("outfit added")
+  }
+
 
   return ( 
 
     <div>
-      <h1>LOOK/BOOK</h1>
+      <h1 class="center">LOOK/BOOK</h1>
 
     <NavBar userName={data.username}/>
     <Switch>
@@ -58,7 +66,7 @@ let App = () => {
         <Profile data={data} addItem={addItem} deleteItem={deleteItem} updateItem={updateItem} deleteOutfit={deleteOutfit}/>
       </Route>
       <Route path="/closet">
-        <Main data={data} />
+        <Main data={data} addOutfit={addOutfit}/>
         </Route>
     </Switch>
         </div>

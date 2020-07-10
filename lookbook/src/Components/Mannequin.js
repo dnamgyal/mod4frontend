@@ -16,6 +16,7 @@ class Mannequin extends React.Component {
        <Form
        myOutfits={this.props.myOutfits}
        clearMyOutfits={this.props.clearMyOutfits}
+       addOutfit={this.props.addOutfit}
        />
       
         </React.Fragment>

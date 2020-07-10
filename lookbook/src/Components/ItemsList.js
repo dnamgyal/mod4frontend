@@ -7,7 +7,7 @@ let ItemsList = (props) => {
 
 
     return (
-        <div>
+        <div className="clothing-items">
         { props.items ? props.items.map((item) => {
            return (<Item item={item} key={item.id} deleteItem={props.deleteItem} updateItem={props.updateItem}/>)
        }) : null}

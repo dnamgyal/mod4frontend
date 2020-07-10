@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Form, Row, Col} from 'react-bootstrap'
+// import {Form, Row, Col} from 'react-bootstrap'
 
 
 
@@ -45,31 +45,21 @@ let AddItem = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="f_name">Name</label>
-            <input type="text" name="name" value={itemObj.name} autoComplete="off" onChange={handleInputs} required/>
+            <input type="text" name="name" value={itemObj.name} autoComplete="off" onChange={handleInputs} required/><br />
             <label htmlFor="f_brand">Brand</label>
-            <input type="text" name="brand" value={itemObj.brand} autoComplete="off" onChange={handleInputs} required/>
+            <input type="text" name="brand" value={itemObj.brand} autoComplete="off" onChange={handleInputs} required/><br />
             <label htmlFor="f_category">Category</label>
-            <select value={itemObj.category} name="category" onChange={handleInputs}>
+            <select value={itemObj.category} name="category" onChange={handleInputs}><br />
                 <option value="headwear">Headwear</option>
                 <option value="top">Top</option>
                 <option value="bottom">Bottom</option>
                 <option value="footwear">Footwear</option>
-                </select>
+                </select><br />
             <label htmlFor="f_image">Image</label>
-            <input type="url" name="image" value={itemObj.image} autoComplete="off" onChange={handleInputs}/>
+            <input type="url" name="image" value={itemObj.image} autoComplete="off" onChange={handleInputs}/><br />
             <input type="submit" value="Add Item"/>
         </form>
 
-            // <Form onSubmit={handleSubmit}>
-            // <Row>
-            // <Col>
-            //     <Form.Control placeholder="Item Name" />
-            // </Col>
-            // <Col>
-            //     <Form.Control placeholder="Brand" />
-            // </Col>
-            // </Row>
-            // </Form>
     )
 }
 

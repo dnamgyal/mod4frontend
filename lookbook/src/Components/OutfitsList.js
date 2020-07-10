@@ -1,16 +1,13 @@
 import React from 'react'
-import Outfit from './Outfit'
+import ProfileOutfit from './ProfileOutfit'
 
 
 let OutfitsList = (props) => {
-
-   
-
-
+    console.log(props.outfits)
     return (
         <div>
      { props.outfits ? props.outfits.map((outfit) => {
-       return (<Outfit outfit={outfit} key={outfit.id} deleteOutfit={props.deleteOutfit}/>)
+       return (<ProfileOutfit outfit={outfit} key={outfit.id} deleteOutfit={props.deleteOutfit}/>)
     }) : null}
      </div>
     )

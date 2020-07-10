@@ -9,24 +9,13 @@ class Main extends React.Component {
 
 
 state = { 
- clothingList: [],
- outfitList: [],
+ clothingList: this.props.data.items,
+ outfitList: this.props.data.outfits,
  myOutfits: [],
 }
 
-componentDidMount = () => {
-fetch("http://localhost:4000/users/1")
-.then(resp => resp.json())
-.then((obj) => {
-this.setState({clothingList: obj.items})
-})
-
-fetch("http://localhost:4000/outfits/1")
-.then(resp => resp.json())
-.then((obj) => {
-this.setState({outfitList: [obj]})
-}
-)
+commponentDidUpdate(prevProps) {
+    this.setState({outfitList: this.props.data.outfits})
 }
 
 addOutfits = (num) =>{
@@ -62,7 +51,7 @@ renderOutfits = ()  => {
         name = {outfit.name}
         id = {outfit.id}
         outfitItems = {outfit.outfit_items}
-        addOutfits = {this.addOutfits} 
+        addOutfits = {this.props.addOutfits} 
         />
     })
 }
@@ -86,6 +75,7 @@ renderOutfits = ()  => {
             <Mannequin
             myOutfits={this.state.myOutfits}
             clearMyOutfits={this.clearMyOutfits}
+            addOutfit={this.props.addOutfit}
             />
         </div>
         
