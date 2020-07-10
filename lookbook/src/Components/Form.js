@@ -40,7 +40,7 @@ class Form extends React.Component {
                 })
             })
           })
-
+          this.props.addOutfitToArr(newOutfit)
           })
         }
 

@@ -54,6 +54,10 @@ renderOutfits = ()  => {
         />
     })
 }
+
+addOutfitToArr = (newOutfit) => {
+    this.setState({outfitList: [...this.state.outfitList, newOutfit] })
+} 
  
     render() { 
 
@@ -75,6 +79,7 @@ renderOutfits = ()  => {
             myOutfits={this.state.myOutfits}
             clearMyOutfits={this.clearMyOutfits}
             addOutfit={this.props.addOutfit}
+            addOutfitToArr={this.addOutfitToArr}
             />
         </div>
         
