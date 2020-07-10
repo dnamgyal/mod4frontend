@@ -68,6 +68,7 @@ addOutfitToArr = (newOutfit) => {
                 {/* ----- FIRST COLUMN BELOW ------*/}
                 <div className="col" id="clotheslist"> 
                     <h2>YOUR CLOTHES</h2>
+
                     {this.renderClothing()}
         
           
