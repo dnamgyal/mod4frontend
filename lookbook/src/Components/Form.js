@@ -17,8 +17,44 @@ class Form extends React.Component {
           handleSubmit = (e) => {
             e.preventDefault()
             console.log("submitted")
+
             this.fetchOutfits()
+            //this.asyncCall();
+
           }
+
+          // postOutfitItem = (outfit) => {
+          //   return new Promise(resolve => {
+          //     setTimeout(fetch("http://localhost:4000/outfit_items", {method: "POST",
+          //             headers: {"content-type" : "application/json"},
+          //             body: JSON.stringify({
+          //                 outfit_id: this.state.outfitId, item_id: outfit
+          //             })
+          //   }), 2000);
+          // })}
+
+          //  asyncCall = async () => {
+          //   console.log('calling');
+          //   this.props.myOutfits.forEach(async (outfit)=> {
+          //     await this.postOutfitItem(outfit)
+          //   console.log(outfit, "outfit posted")})
+            
+      
+          // }
+
+
+          // fetchOutfits = () => {
+          //       fetch("http://localhost:4000/outfits/", {method: "POST",
+          //       headers: {"content-type": "application/json"},
+          //       body: JSON.stringify({
+          //         name: this.state.name, user_id: 1
+          //       })
+          //     })
+          //     .then(resp => resp.json())
+              
+          //     .then((newOutfit)=> {
+          //       this.setState({outfitId: newOutfit.id})
+          //       this.props.addOutfit(newOutfit) })}
 
         fetchOutfits = () => {
             fetch("http://localhost:4000/outfits/", {method: "POST",
@@ -45,7 +81,6 @@ class Form extends React.Component {
         }
 
     render() {
-      console.log(this.state.outfitId)
         return (
             <div>
             <form onSubmit={this.handleSubmit}>

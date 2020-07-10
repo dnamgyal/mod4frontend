@@ -6,7 +6,7 @@ let OutfitsList = (props) => {
     return (
         <div>
      { props.outfits ? props.outfits.map((outfit) => {
-       return (<ProfileOutfit outfit={outfit} key={outfit.id} deleteOutfit={props.deleteOutfit}/>)
+       return (<ProfileOutfit outfit={outfit} key={outfit.id} deleteOutfit={props.deleteOutfit} editOutfitName={props.editOutfitName}/>)
     }) : null}
      </div>
     )

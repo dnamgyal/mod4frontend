@@ -35,7 +35,7 @@ let Profile = (props) => {
 
             <AddItem id={props.data.id} addItem={props.addItem}/>
         </div>
-        <div className="col" id="itemList" >
+        <div className="col" id="middle" >
         <h2>MY CLOTHES</h2>
 
         
@@ -50,9 +50,9 @@ let Profile = (props) => {
 
         <ItemsList items={returnArray()} deleteItem={props.deleteItem} updateItem={props.updateItem}/>
         </div>
-        <div className="col" id="itemList">
+        <div className="col" id="closetlist">
         <h2>MY OUTFITS</h2>
-        <OutfitsList outfits={props.data.outfits} deleteOutfit={props.deleteOutfit}/>
+        <OutfitsList outfits={props.data.outfits} deleteOutfit={props.deleteOutfit} editOutfitName={props.editOutfitName}/>
         </div>
 
         </div>

@@ -45,6 +45,18 @@ let App = () => {
     setData({...data, items: updatedItemsList})
   }
 
+
+  let editOutfitName = (newOutfit) => {
+    let updatedOutfits = data.outfits.map((outfit) => {
+      if (outfit.id === newOutfit.id) {
+        return newOutfit
+      } else {
+        return outfit
+      }
+    })
+    setData({...data, outfits: updatedOutfits})
+  }
+
   let addOutfit = (newOutfit) => {
     let newList = [...data.outfits, newOutfit]
     setData({...data, outfits: newList})
@@ -55,24 +67,12 @@ let App = () => {
   return ( 
 
     <div>
-<h1 className="center">
-  <span>L</span>
-  <span>O</span>
-  <span>O</span>
-  <span>K</span>
-  <span>/</span>
-  <span>B</span>
-  <span>O</span>
-  <span>O</span>
-  <span>K</span>
+      <h1 className="center"><span>LOOK/BOOK</span></h1>
 
-</h1>
-<br></br>
-<br></br>
     <NavBar userName={data.username}/>
     <Switch>
       <Route path="/profile">
-        <Profile data={data} addItem={addItem} deleteItem={deleteItem} updateItem={updateItem} deleteOutfit={deleteOutfit}/>
+        <Profile data={data} addItem={addItem} deleteItem={deleteItem} updateItem={updateItem} deleteOutfit={deleteOutfit} editOutfitName={editOutfitName}/>
       </Route>
       <Route path="/closet">
         <Main data={data} addOutfit={addOutfit}/>

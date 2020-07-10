@@ -25,7 +25,9 @@ handleShow = (e) => {
 }
 
 
+
 showOutfit = () => {
+
    return  this.props.outfitItems.map((item)=>{
     
     return     <Clothing
